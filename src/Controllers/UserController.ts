@@ -1,17 +1,15 @@
 import {Controller, Param, Body, Get, Post, Put, Delete} from "routing-controllers";
- 
+import User from '../Models/User';
 @Controller()
 export class UserController {
  
     @Get("/users")
     getAll() {
-       return Body
-      // app._router.stack.forEach(function(r){
-      //    if (r.route && r.route.path){
-      //    //   console.log(r.route.path)
-      //    }
-      //  })
-       return "This action returns all users";
+      // const newUser =  User.create({
+      //    name: 'Johnny',
+      //    preferredName: 'John',
+      //  });
+       return 'success'
     }
  
    //  @Get("/users/:id")
