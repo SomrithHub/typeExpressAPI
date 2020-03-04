@@ -10,7 +10,7 @@ import {
 
 @JsonController()
 export class AdminController {
-  @Get("/users")
+  @Get("/admin")
   getAll() {
       return 'hello api';
     // return userRepository.findAll();
