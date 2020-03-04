@@ -1,13 +1,17 @@
-/* 
+/*
 
 Developed by Abhishek Raj on 15-05-2018
 
 */
+import express from 'express'
+import path from 'path'
+import cors from 'cors'
 
-const express = require("express");
-const path = require("path");
 
-var cors = require('cors')
+// const express = require("express");
+// const path = require("path");
+
+// var cors = require('cors')
 
 const {
     Student
