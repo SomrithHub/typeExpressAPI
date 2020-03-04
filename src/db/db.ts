@@ -1,5 +1,6 @@
-export { database, username, password } from "../config/database";
-const Sequelize = require("sequelize");
+import { database, username, password } from "../config/database";
+import { Sequelize } from "sequelize";
+// const Sequelize = require("sequelize");
 
 const db = new Sequelize(database, username, password, {
   host: "localhost",
@@ -96,10 +97,9 @@ Batch.belongsToMany(Student, { through: "BatchStudent" });
 Student.belongsToMany(Batch, { through: "BatchStudent" });
 
 db.sync()
-  .then(() => console.log("Database Sync"))
-  .catch(err => console.log("Error"));
+  .then();
 
-module.exports = {
+export default {
   Teacher,
   Subject,
   Student,
