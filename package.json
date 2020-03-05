@@ -15,7 +15,9 @@
     "type": "typeorm init --name database --database mysql",
     "db:start": "ts-node src/database/src/index.ts",
     "db:migrate":"typeorm migration:run && ts-node ./node_modules/typeorm/cli.js migration:run",
-    "test":"typeorm migration:create -n User"
+    "db:rollback":"typeorm migration:revert",
+    "test":"typeorm migration:create -n User",
+    "test2":"typeorm migration:generate"
   },
   "author": "somrith",
   "license": "ISC",

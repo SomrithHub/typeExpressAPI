@@ -6,7 +6,7 @@ createConnection['entities'] = [User]
 createConnection()
   .then(async connection => {
     console.log("Inserting a new user into the database...");
-    let user = await userRepository.find();
+    // let user = await userRepository.find();
     
   })
   .then(resp => process.exit(1))
