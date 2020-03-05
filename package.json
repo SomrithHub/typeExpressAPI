@@ -14,10 +14,10 @@
     "inits": "tsc --init",
     "type": "typeorm init --name database --database mysql",
     "db:start": "ts-node src/database/src/index.ts",
-    "db:migrate":"typeorm migration:run && ts-node ./node_modules/typeorm/cli.js migration:run",
-    "db:rollback":"typeorm migration:revert",
-    "test":"typeorm migration:create -n User",
-    "test2":"typeorm migration:generate"
+    "db:migrate": "typeorm migration:run && ts-node ./node_modules/typeorm/cli.js migration:run",
+    "db:rollback": "typeorm migration:revert",
+    "test": "typeorm migration:create -n User",
+    "test2": "typeorm migration:generate"
   },
   "author": "somrith",
   "license": "ISC",
@@ -33,6 +33,7 @@
     "method-override": "^3.0.0",
     "multer": "^1.4.2",
     "mysql": "^2.18.1",
+    "mysql2": "^2.1.0",
     "nodemon": "^1.17.4",
     "reflect-metadata": "^0.1.13",
     "routing-controllers": "^0.8.1-alpha.2",
