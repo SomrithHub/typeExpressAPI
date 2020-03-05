@@ -10,6 +10,4 @@ const Connection = new Sequelize(database, username, password, {
     storage: "./schoolsystem.db"
   });
 
-global.console(Connection);
-
 export default Connection;
