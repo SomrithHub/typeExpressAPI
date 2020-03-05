@@ -7,6 +7,12 @@ import { AdminController as UserApi } from "./Controllers/Api/v1/AdminController
 const app = createExpressServer({
   controllers: [UserController, UserApi] // we specify controllers we want to use
 });
-// console.log('f');
 // run express application on port 3000
 app.listen(3000);
+console.log('Express app start on port 3000\n\n*** All Routes ***\n');
+
+app._router.stack.forEach(function(r){
+  if (r.route && r.route.path){
+    console.log(r.route.path)
+  }
+})

@@ -4,6 +4,7 @@
   "description": "express scaffolding project",
   "main": "src/index.ts",
   "scripts": {
+    "serve": "ts-node src/index.ts",
     "dev:app": "nodemon --config \"./util/nodemon.json\"/",
     "dev": "tsc && nodemon dist/index.js",
     "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
@@ -12,7 +13,7 @@
     "lint": "tslint -c tslint.json -p tsconfig.json --fix",
     "inits": "tsc --init",
     "type": "typeorm init --name database --database mysql",
-    "db:start": "ts-node src/index.ts"
+    "db:start": "ts-node src/database/src/index.ts"
   },
   "author": "somrith",
   "license": "ISC",
