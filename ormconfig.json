@@ -1,0 +1,24 @@
+{
+   "type": "mysql",
+   "host": "localhost",
+   "port": 3308,
+   "username": "admin",
+   "password": "",
+   "database": "typescript",
+   "synchronize": true,
+   "logging": false,
+   "entities": [
+      "src/database/src/entity/**/*.ts"
+   ],
+   "migrations": [
+      "src/database/src/migration/**/*.ts"
+   ],
+   "subscribers": [
+      "src/database/src/subscriber/**/*.ts"
+   ],
+   "cli": {
+      "entitiesDir": "src/database/src/entity",
+      "migrationsDir": "src/database/src/migration",
+      "subscribersDir": "src/database/src/subscriber"
+   }
+}

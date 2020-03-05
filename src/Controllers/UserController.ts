@@ -1,34 +1,11 @@
 import {Controller, Param, Body, Get, Post, Put, Delete} from "routing-controllers";
-// import User from '../Models/User';
-import Course from '../Models/Models'
 
 @Controller()
 export class UserController {
  
     @Get("/users")
     async getAll() {
-      Course.create({name:'John'})
-      .then((course) => {
-         return 'success'
-      })
-      .catch( (err)=> {
-         return 'fail'
-      })
-       Course.findAll().then((courses) => { return 'courses' })
-      // const newUser =  User.create({
-      //    name: 'Johnny',
-      //    preferredName: 'John',
-      //  });
-   //    Course.findAll().then((courses) => {
-   //       return 'courses'
-   //   })
-   //   .catch((err) => {
-   //       return {
-   //           success: false,
-   //           message: "Error! Something is not right"
-   //       }
-   //   })
-     return 'Coursessss'
+      return 'Coursessss'
     }
  
    //  @Get("/users/:id")
