@@ -1,18 +1,29 @@
 import "reflect-metadata"; // this shim is required
-import { createExpressServer } from "routing-controllers";
-import { UserController } from "./Controllers/UserController";
+import { createExpressServer, UseAfter } from "routing-controllers";
+import { UserController } from "./Controllers/Api/v1/UserController";
 import { AdminController as UserApi } from "./Controllers/Api/v1/AdminController";
+import { Middleware } from "./middlewares/middleware";
+let compression = require("compression");
 
-// creates express app, registers all controller routes and returns you express app instance
+/*  creates express app, registers all controller routes
+    and returns you express app instance
+*/
 const app = createExpressServer({
-  controllers: [UserController, UserApi] // we specify controllers we want to use
+  routePrefix: "/api",
+  controllers: [UserController, UserApi]
 });
-// run express application on port 3000
-app.listen(3000);
-console.log('Express app start on port 3000\n\n*** All Routes ***\n');
+app.listen(3000, function() {
+  console.log("\n => Express app start on port 3000\n\n*** All Routes ***\n");
+});
 
+const NewRoute = [];
+let i = 0;
 app._router.stack.forEach(function(r){
   if (r.route && r.route.path){
-    console.log(r.route.path)
+    NewRoute[i]=r.route.path
+    i+=1
   }
 })
+console.table(NewRoute);
+
+app.use(compression());
