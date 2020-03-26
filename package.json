@@ -14,9 +14,9 @@
     "inits": "tsc --init",
     "type": "typeorm init --name database --database mysql",
     "db:start": "ts-node src/database/src/index.ts",
-    "db:migrate": "typeorm migration:run && ts-node ./node_modules/typeorm/cli.js migration:run",
+    "db:migrate": "typeorm migration:run",
     "db:rollback": "typeorm migration:revert",
-    "test": "typeorm migration:create -n User",
+    "test": "typeorm migration:create -n Admin",
     "test2": "typeorm migration:generate"
   },
   "author": "somrith",

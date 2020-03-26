@@ -1,13 +1,30 @@
 import "reflect-metadata";
-import { Controller, Param, Body, Get, Post, Put, Delete, UseBefore, UseAfter, UnauthorizedError } from "routing-controllers";
-import all from '../../../models/UserModel'
+import {
+  Controller,
+  Param,
+  Body,
+  Get,
+  Post,
+  Put,
+  Delete,
+  UseBefore,
+  UseAfter,
+  UnauthorizedError
+} from "routing-controllers";
+import {User} from '../../../models/User'
+import { createConnection } from "typeorm";
 import { Allow } from "class-validator";
+
 @Controller()
 export class UserController {
 
   @Get("/users")
   async index() {
-    return await all()
+    // createConnection().then(connection => {
+    //   let allPhotos = User.find();
+    //   console.log("All photos from the db: ", allPhotos);
+    // });
+    return "hey";
   }
 
   @Get("/users/:id")

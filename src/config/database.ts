@@ -4,9 +4,9 @@ const mysql = require('mysql2');
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  password: 'password',
-  database: 'company_comony',
-  port: '3308'
+  password: '',
+  database: 'typescript',
+  port: '3306'
 });
 
 export default connection;
