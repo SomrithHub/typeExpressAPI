@@ -3,7 +3,7 @@ import { createExpressServer, UseAfter } from "routing-controllers";
 import { UserController } from "./Controllers/Api/v1/UserController";
 import { AdminController as UserApi } from "./Controllers/Api/v1/AdminController";
 import { Middleware } from "./middlewares/middleware";
-let compression = require("compression");
+const compression = require("compression");
 
 /*  creates express app, registers all controller routes
     and returns you express app instance

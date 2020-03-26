@@ -1,0 +1,1 @@
+{"version":3,"file":"AdminController.js","sourceRoot":"","sources":["../../../../src/Controllers/Api/v1/AdminController.ts"],"names":[],"mappings":";;;;;;;;;;;AAAA,2DAQ6B;AAG7B;IAAA;IAgBA,CAAC;IAdC,gCAAM,GAAN;QACI,OAAO,WAAW,CAAC;QACrB,mCAAmC;IACrC,CAAC;IAHD;QADC,yBAAG,CAAC,QAAQ,CAAC;;;;iDAIb;IALU,eAAe;QAD3B,oCAAc,EAAE;OACJ,eAAe,CAgB3B;IAAD,sBAAC;CAAA,AAhBD,IAgBC;AAhBY,0CAAe"}
